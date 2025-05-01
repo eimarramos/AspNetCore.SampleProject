@@ -6,10 +6,11 @@ public static class WebApplicationExtensions
 {
     public static RouteGroupBuilder MapGroup(this WebApplication app, EndpointGroupBase group)
     {
-        var groupName = group.GetType().Name;
+        var groupName = group.Name;
+        var groupVersion = group.Version;
 
         return app
-            .MapGroup($"/api/{groupName}")
+            .MapGroup($"/api/v{groupVersion}/{groupName}")
             .WithGroupName(groupName)
             .WithTags(groupName);
     }
