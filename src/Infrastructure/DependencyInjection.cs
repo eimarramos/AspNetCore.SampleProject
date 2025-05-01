@@ -12,8 +12,8 @@ public static class DependencyInjection
 {
     public static void AddInfrastructureServices(this IHostApplicationBuilder builder)
     {
-        var connectionString = builder.Configuration.GetConnectionString("PokemonAPI_Db");
-        Guard.Against.Null(connectionString, message: "Connection string 'PokemonAPI_Db' not found.");
+        var connectionString = builder.Configuration.GetConnectionString("PokemonApiDb");
+        Guard.Against.Null(connectionString, message: "Connection string 'PokemonApiDb' not found.");
 
         builder.Services.AddScoped<ISaveChangesInterceptor, DispatchDomainEventsInterceptor>();
 
