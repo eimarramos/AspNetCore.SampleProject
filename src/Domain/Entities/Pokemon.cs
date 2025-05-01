@@ -6,8 +6,8 @@ namespace Domain.Entities
     {
         public string? Name { get; set; }
         public string? Image { get; set; }
-        public double Weight { get; set; }
-        public double Height { get; set; }
+        public float Weight { get; set; }
+        public float Height { get; set; }
         public ICollection<string>? Types { get; set; }
         public ICollection<PokemonStat>? Stats { get; set; }
     }
