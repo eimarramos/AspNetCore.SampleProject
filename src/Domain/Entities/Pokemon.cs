@@ -14,6 +14,7 @@ namespace Domain.Entities
 
     public class PokemonStat : BaseEntity
     {
+        public Pokemon? Pokemon { get; set; }
         public string? Name { get; set; }
         public int Value { get; set; }
     }
