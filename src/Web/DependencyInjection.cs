@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Infrastructure.Data;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -6,14 +7,11 @@ public static class DependencyInjection
 {
     public static void AddWebServices(this IHostApplicationBuilder builder)
     {
-        // Show DB errors in development
-        // builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-        // Include DB health checks
-        // builder.Services.AddHealthChecks().AddDbContextCheck<ApplicationDbContext>();
+        builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
         builder.Services.AddHttpContextAccessor();
-        builder.Services.AddHealthChecks();
+        builder.Services.AddHealthChecks().AddDbContextCheck<ApplicationDbContext>();
         builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 
         // Customise default API behaviour
