@@ -4,6 +4,7 @@ namespace Domain.Entities
 {
     public class Pokemon : BaseEntity
     {
+        public int PokedexNumber { get; set; }
         public string? Name { get; set; }
         public string? Image { get; set; }
         public float Weight { get; set; }
