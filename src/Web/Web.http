@@ -1,6 +1,6 @@
 @Web_HostAddress = http://localhost:5249
 
-GET {{Web_HostAddress}}/weatherforecast/
+GET {{Web_HostAddress}}/api/v1/pokemon
 Accept: application/json
 
 ###
