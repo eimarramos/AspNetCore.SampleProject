@@ -12,7 +12,7 @@ namespace Domain.Entities
         public ICollection<PokemonStat>? Stats { get; set; }
     }
 
-    public class PokemonStat
+    public class PokemonStat : BaseEntity
     {
         public string? Name { get; set; }
         public int Value { get; set; }
