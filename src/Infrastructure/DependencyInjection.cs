@@ -1,7 +1,6 @@
 ﻿using Application.Common.Interfaces;
 using Infrastructure.Data;
 using Infrastructure.Data.Interceptors;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
