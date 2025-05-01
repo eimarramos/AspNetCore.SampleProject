@@ -1,4 +1,4 @@
-﻿namespace Application.Pokemons.Queries.GetPokemons
+﻿namespace Application.Pokemons.V1.Queries.GetPokemons
 {
     public class PokemonsVm
     {

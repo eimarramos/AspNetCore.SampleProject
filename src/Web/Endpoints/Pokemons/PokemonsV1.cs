@@ -1,9 +1,9 @@
-﻿using Application.Pokemons.Queries.GetPokemons;
+﻿using Application.Pokemons.V1.Queries.GetPokemons;
 using Microsoft.AspNetCore.Http.HttpResults;
 
-namespace Web.Endpoints
+namespace Web.Endpoints.Pokemons
 {
-    public class Pokemons : EndpointGroupBase
+    public class PokemonsV1 : EndpointGroupBase
     {
         public override int Version => 1;
         public override EndpointName NameEnum => EndpointName.Pokemon;

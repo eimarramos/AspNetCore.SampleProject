@@ -1,6 +1,6 @@
 ﻿using Application.Common.Interfaces;
 
-namespace Application.Pokemons.Queries.GetPokemons
+namespace Application.Pokemons.V1.Queries.GetPokemons
 {
     public record GetPokemonsQuery : IRequest<PokemonsVm>;
 
