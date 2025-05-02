@@ -1,29 +1,29 @@
 ﻿using Application.Common.Interfaces;
 
-namespace Application.Pokemons.V1.Queries.GetPokemons
+namespace Application.Pokemons.V1.Queries.GetPokemons;
+
+public record GetPokemonsQuery : IRequest<PokemonsVm>;
+
+public class GetPokemonsQueryHandler : IRequestHandler<GetPokemonsQuery, PokemonsVm>
 {
-    public record GetPokemonsQuery : IRequest<PokemonsVm>;
+    private readonly IApplicationDbContext _context;
+    private readonly IMapper _mapper;
 
-    public class GetPokemonsQueryHandler : IRequestHandler<GetPokemonsQuery, PokemonsVm>
+    public GetPokemonsQueryHandler(IApplicationDbContext context, IMapper mapper)
     {
-        private readonly IApplicationDbContext _context;
-        private readonly IMapper _mapper;
+        _context = context;
+        _mapper = mapper;
+    }
 
-        public GetPokemonsQueryHandler(IApplicationDbContext context, IMapper mapper)
+    public async Task<PokemonsVm> Handle(GetPokemonsQuery request, CancellationToken cancellationToken)
+    {
+        return new PokemonsVm
         {
-            _context = context;
-            _mapper = mapper;
-        }
-
-        public async Task<PokemonsVm> Handle(GetPokemonsQuery request, CancellationToken cancellationToken)
-        {
-            return new PokemonsVm
-            {
-                Pokemons = await _context.Pokemons
-                .AsNoTracking()
-                .ProjectTo<PokemonDto>(_mapper.ConfigurationProvider)
-                .ToListAsync(cancellationToken)
-            };
-        }
+            Pokemons = await _context.Pokemons
+            .AsNoTracking()
+            .ProjectTo<PokemonDto>(_mapper.ConfigurationProvider)
+            .ToListAsync(cancellationToken)
+        };
     }
 }
+

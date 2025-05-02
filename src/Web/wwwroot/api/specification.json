@@ -11,14 +11,36 @@
         "tags": [
           "pokemon"
         ],
-        "operationId": "GetPokemons",
+        "operationId": "GetPokemonsWithPagination",
+        "parameters": [
+          {
+            "name": "PageNumber",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 1
+          },
+          {
+            "name": "PageSize",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "x-position": 2
+          }
+        ],
         "responses": {
           "200": {
             "description": "",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PokemonsVm"
+                  "$ref": "#/components/schemas/PaginatedListOfPokemonWithPaginationDto"
                 }
               }
             }
@@ -29,19 +51,37 @@
   },
   "components": {
     "schemas": {
-      "PokemonsVm": {
+      "PaginatedListOfPokemonWithPaginationDto": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
-          "pokemons": {
+          "items": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/PokemonDto"
+              "$ref": "#/components/schemas/PokemonWithPaginationDto"
             }
+          },
+          "pageNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalPages": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "hasPreviousPage": {
+            "type": "boolean"
+          },
+          "hasNextPage": {
+            "type": "boolean"
           }
         }
       },
-      "PokemonDto": {
+      "PokemonWithPaginationDto": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
@@ -80,12 +120,12 @@
             "type": "array",
             "nullable": true,
             "items": {
-              "$ref": "#/components/schemas/PokemonStatDto"
+              "$ref": "#/components/schemas/PokemonStatWithPaginationDto"
             }
           }
         }
       },
-      "PokemonStatDto": {
+      "PokemonStatWithPaginationDto": {
         "type": "object",
         "additionalProperties": false,
         "properties": {
