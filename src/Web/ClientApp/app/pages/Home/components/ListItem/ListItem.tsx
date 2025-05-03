@@ -20,7 +20,7 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
     >
       <header className={style.card_header}>
         <h3 className={style.card_header__name}>
-          {FormatString(pokemon.name)}
+          {pokemon.name}
         </h3>
         <p className={style.card_header_id}>#{formatNumber(pokemon.id)}</p>
       </header>

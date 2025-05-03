@@ -11,7 +11,7 @@ export const TypeComponent: React.FC<TypeProps> = ({ name }) => {
   return (
     <div data-testid="pill" className={`${style.card_body_pills} ${getColor(name)}`}>
       {svgDictionary(name)}
-      <p>{FormatString(name)}</p>
+      <p>{name}</p>
     </div>
   )
 }
