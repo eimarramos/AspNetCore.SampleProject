@@ -1,4 +1,4 @@
-import { colors } from '~/utils/Colors/ColorsMapper'
+import { getColor } from '~/utils/Colors/ColorsMapper'
 import { FormatString } from '~/utils/StringFormater/StringFormater'
 import { svgDictionary } from '~/utils/SvgDictionary/SvgDictionary'
 import style from './Type.module.css'
@@ -9,7 +9,7 @@ type TypeProps = {
 
 export const TypeComponent: React.FC<TypeProps> = ({ name }) => {
   return (
-    <div data-testid="pill" className={`${style.card_body_pills} ${colors[name]}`}>
+    <div data-testid="pill" className={`${style.card_body_pills} ${getColor(name)}`}>
       {svgDictionary(name)}
       <p>{FormatString(name)}</p>
     </div>

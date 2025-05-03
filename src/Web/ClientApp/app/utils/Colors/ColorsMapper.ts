@@ -1,6 +1,6 @@
-import style from './ColorsMapper.module.css'
+import style from "./ColorsMapper.module.css";
 
-export const colors: Record<string, string> = {
+const colors: Record<string, string> = {
   electric: style.electric,
   bug: style.bug,
   grass: style.grass,
@@ -19,4 +19,8 @@ export const colors: Record<string, string> = {
   steal: style.steal,
   dark: style.dark,
   ice: style.ice,
-}
+};
+
+export const getColor = (type: string): string | undefined => {
+  return colors[type.toLowerCase()];
+};

@@ -3,7 +3,7 @@ import { StatComponent } from '../Stat/Stat'
 import type { Pokemon } from '~/domain/pokemon/model/Pokemon'
 import { Weight } from '~/assets/svg/Weight'
 import { Ruler } from '~/assets/svg/Ruler'
-import { colors } from '~/utils/Colors/ColorsMapper'
+import { getColor } from '~/utils/Colors/ColorsMapper'
 import { TypeComponent } from '../Type/Type'
 import { formatNumber } from '~/utils/NumberFormater/NumberFormater'
 import { FormatString } from '~/utils/StringFormater/StringFormater'
@@ -16,7 +16,7 @@ export const ListItemComponent: React.FC<ListItemProps> = ({ pokemon }) => {
   return (
     <article
       data-testid="pokemonCard"
-      className={`${style.pokemon_card} ${colors[pokemon.types[0].toLocaleLowerCase()]}`}
+      className={`${style.pokemon_card} ${getColor(pokemon.types[0])}`}
     >
       <header className={style.card_header}>
         <h3 className={style.card_header__name}>
