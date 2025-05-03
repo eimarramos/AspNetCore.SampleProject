@@ -1,4 +1,4 @@
-import { WhitePokeball } from '../../../../assets/svg/WhitePokeball'
+import { WhitePokeball } from '~/assets/svg/WhitePokeball'
 import style from './LoadingItem.module.css'
 
 export const LoadingItemComponent = () => {

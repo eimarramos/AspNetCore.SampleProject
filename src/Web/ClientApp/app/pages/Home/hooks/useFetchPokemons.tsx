@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { pokemonService } from '../../../services/pokemonService/pokemonService'
+import { pokemonService } from '~/services/pokemonService/pokemonService'
 import type { Pokemon } from '~/domain/pokemon/model/Pokemon'
 
 export const useGetPokemons = (numberOfPokemons: number = 150) => {

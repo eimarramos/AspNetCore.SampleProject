@@ -1,4 +1,4 @@
-import { AlertIcon } from '../../../../assets/svg/AlertIcon'
+import { AlertIcon } from '~/assets/svg/AlertIcon'
 import style from './Error.module.css'
 
 export const ErrorComponent = () => (

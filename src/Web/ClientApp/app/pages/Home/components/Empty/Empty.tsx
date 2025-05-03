@@ -1,4 +1,4 @@
-import { EmptyIcon } from '../../../../assets/svg/EmptyIcon'
+import { EmptyIcon } from '~/assets/svg/EmptyIcon'
 import style from './Empty.module.css'
 
 export const EmptyComponent = () => (

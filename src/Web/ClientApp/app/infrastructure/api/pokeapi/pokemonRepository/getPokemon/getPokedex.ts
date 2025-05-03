@@ -1,4 +1,4 @@
-import { BASE_URL } from '../../../../../config/config'
+import { BASE_URL } from '~/config/config'
 import type { PaginationResponse } from '../../types/PaginationResponse'
 
 export const getPokedex = async () => {

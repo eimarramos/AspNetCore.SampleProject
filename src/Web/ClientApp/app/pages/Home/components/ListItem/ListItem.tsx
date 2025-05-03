@@ -1,12 +1,12 @@
 import style from './ListItem.module.css'
 import { StatComponent } from '../Stat/Stat'
 import type { Pokemon } from '~/domain/pokemon/model/Pokemon'
-import { Weight } from '../../../../assets/svg/Weight'
-import { Ruler } from '../../../../assets/svg/Ruler'
-import { colors } from '../../../../utils/Colors/ColorsMapper'
+import { Weight } from '~/assets/svg/Weight'
+import { Ruler } from '~/assets/svg/Ruler'
+import { colors } from '~/utils/Colors/ColorsMapper'
 import { TypeComponent } from '../Type/Type'
-import { formatNumber } from '../../../../utils/NumberFormater/NumberFormater'
-import { FormatString } from '../../../../utils/StringFormater/StringFormater'
+import { formatNumber } from '~/utils/NumberFormater/NumberFormater'
+import { FormatString } from '~/utils/StringFormater/StringFormater'
 
 type ListItemProps = {
   pokemon: Pokemon

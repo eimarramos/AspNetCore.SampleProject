@@ -1,5 +1,5 @@
 import style from './Navbar.module.css'
-import nav_icon from '../../assets/images/Pokeball.png'
+import nav_icon from '~/assets/images/Pokeball.png'
 
 export const NavbarComponent = () => (
   <header className={style.navbar}>

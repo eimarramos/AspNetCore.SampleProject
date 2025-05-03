@@ -1,5 +1,5 @@
 import style from './SearchBar.module.css'
-import searchIcon from '../../../../assets/images/Search icon.png'
+import searchIcon from '~/assets/images/Search icon.png'
 
 type StatProps = {
   filterPokemons: (event: React.FormEvent<HTMLInputElement>) => void

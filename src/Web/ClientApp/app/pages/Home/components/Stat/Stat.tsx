@@ -1,4 +1,4 @@
-import { formatNumber } from '../../../../utils/NumberFormater/NumberFormater'
+import { formatNumber } from '~/utils/NumberFormater/NumberFormater'
 import style from './Stat.module.css'
 
 type StatProps = {
