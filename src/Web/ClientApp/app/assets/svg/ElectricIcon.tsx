@@ -1,0 +1,21 @@
+export const ElectricIcon = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 40 40"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g clipPath="url(#clip0_2053_1112)">
+      <path
+        d="M13.4375 9.0625H23.125L27.1875 21.875L20.9375 21.5625L24.6875 32.1875L9.6875 16.7188H16.875L13.4375 9.0625Z"
+        fill="#ffff"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_2053_1112">
+        <rect width="40" height="40" fill="white" />
+      </clipPath>
+    </defs>
+  </svg>
+)

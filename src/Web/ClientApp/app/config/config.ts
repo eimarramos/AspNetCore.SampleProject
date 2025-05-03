@@ -1,0 +1,1 @@
+export const BASE_URL = "https://localhost:7051/api/v1/pokemon"

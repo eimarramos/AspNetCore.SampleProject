@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --desktop-font: "Kanit", sans-serif;
+
+    /*Default font-weight*/
+    --font-weight: 400;
+
+    /*Text sizing*/
+    
+        /*MOBILE*/
+        --mobile-text-size-display: 1.5rem; /*24px*/ 
+        --mobile-text-size-headline: 1.25rem; /*20px*/ 
+        --mobile-text-size-subheadline: 1rem; /*16px*/ 
+        --mobile-text-size-link: 0.875rem; /*14px*/ 
+        --mobile-text-size-body: 0.875rem; /*14px*/ 
+        --mobile-text-size-caption: 0.75rem; /*14px*/ 
+        
+         /*DESKTOP*/
+         --desktop-text-size-display: 1.75rem; /*28px*/ 
+         --desktop-text-size-headline: 1.5rem; /*24px*/ 
+         --desktop-text-size-subheadline: 1.125rem; /*18px*/ 
+         --desktop-text-size-link: 1rem; /*16px*/ 
+         --desktop-text-size-body: 1rem; /*16px*/ 
+         --desktop-text-size-caption: 0.75rem; /*14px*/ 
+}

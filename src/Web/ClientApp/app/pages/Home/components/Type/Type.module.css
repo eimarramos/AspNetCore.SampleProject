@@ -1,0 +1,26 @@
+.card_body_pills {
+    display: flex;
+    align-items: center;
+
+    height: var(--spacing-l);
+    padding: var(--spacing-3xs) var(--spacing-xs);
+
+    gap: var(--spacing-2xs);
+    border-radius: 100px;
+    color: var(--color-brand-0);
+
+    font-size: 12px;
+}
+
+.card_body_pills--grass {
+    background-color: var(--color-type-grass);
+}
+
+.card_body_pills--poison {
+    background-color: var(--color-type-poison);
+}
+
+.card_body__pills_icon {
+    height: var(--spacing-m);
+    width: var(--spacing-m);
+}

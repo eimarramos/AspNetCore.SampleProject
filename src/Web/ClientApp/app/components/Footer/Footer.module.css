@@ -1,0 +1,20 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  min-height: 62px;
+  padding: var(--spacing-m);
+  margin-top: auto;
+
+  background-color: var(--color-brand-9);
+}
+
+.footer__text {
+  color: var(--color-brand-0);
+  text-align: center;
+}

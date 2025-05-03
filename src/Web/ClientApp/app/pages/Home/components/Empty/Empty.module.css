@@ -1,0 +1,17 @@
+.empty_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+    gap:var(--spacing-xl);
+    
+    color: var(--color-brand-9);
+    
+    text-align: center;
+
+    z-index: 10;
+}
