@@ -14,6 +14,17 @@ public static class DependencyInjection
         builder.Services.AddHealthChecks().AddDbContextCheck<ApplicationDbContext>();
         builder.Services.AddExceptionHandler<CustomExceptionHandler>();
 
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("FrontendCorsPolicy", builder =>
+            {
+                builder
+                    .WithOrigins("https://localhost:5173")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+            });
+        });
+
         // Customise default API behaviour
         builder.Services.Configure<ApiBehaviorOptions>(options =>
             options.SuppressModelStateInvalidFilter = true);

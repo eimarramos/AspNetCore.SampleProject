@@ -20,6 +20,8 @@ else
     app.UseHsts();
 }
 
+app.UseCors("FrontendCorsPolicy");
+
 app.UseHealthChecks("/health");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
