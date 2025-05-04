@@ -26,6 +26,7 @@ This is a modern ASP.NET Core Web API project demonstrating the **Clean Architec
 ## 📦 Features
 
 - ✅ **Clean separation of layers following Clean Architecture**
+- ✅ Support for **API Versioning** (v1, v2, etc.)
 - ✅ **SPA Proxy via Microsoft.AspNetCore.SpaProxy**
 - ✅ **React with React Router 7.5.3**
 - ✅ **CQRS with MediatR**
