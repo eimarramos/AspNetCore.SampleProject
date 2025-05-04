@@ -8,12 +8,6 @@
     <AssemblyName>Web</AssemblyName>
   </PropertyGroup>	
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.15" />
