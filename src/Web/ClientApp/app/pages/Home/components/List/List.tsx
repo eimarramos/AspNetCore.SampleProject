@@ -12,9 +12,9 @@ export const ListComponent: React.FC<ListProps> = ({ pokemons, children }) => {
   return (
     <section className={style.list_container}>
       {children}
-      {pokemons.map(pokemon => (
+      {pokemons.map((pokemon, index) => (
         <ListItemComponent
-          key={pokemon.id}
+          key={index}
           pokemon={pokemon}
         ></ListItemComponent>
       ))}

@@ -1,18 +1,24 @@
-import type { PokemonRepository } from '~/domain/pokemon/model/PokemonRepository'
-import { getPokedex } from './getPokemon/getPokedex'
-import { mapPokemon } from '../PokemonMapper/PokemonMapper'
-import type { Pokemon } from '~/domain/pokemon/model/Pokemon'
+import type { PokemonRepository } from "~/domain/pokemon/model/PokemonRepository";
+import { getPokedexResponse } from "./getPokemon/getPokedex";
+import { mapPokemon } from "../PokemonMapper/PokemonMapper";
+import type { Pokemon } from "~/domain/pokemon/model/Pokemon";
+import type { Pagination } from "~/domain/pokemon/model/Pagination";
 
-const getPokemons = async () => {
-  const pokedex = await getPokedex()
+const getPokedex = async (pageNumber: number) => {
+  const paginationResponse = await getPokedexResponse(pageNumber);
 
-  const pokemonsMapped : Pokemon[] = await Promise.all(
-    pokedex.items.map(async (pokemon) => mapPokemon(pokemon))
-  )
+  const pokemonsMapped: Pokemon[] = await Promise.all(
+    paginationResponse.items.map(async (pokemon) => mapPokemon(pokemon))
+  );
 
-  return pokemonsMapped
-}
+  const paginationResponseMapped: Pagination = {
+    ...paginationResponse,
+    items: pokemonsMapped,
+  };
+
+  return paginationResponseMapped;
+};
 
 export const pokemonApiRepository: PokemonRepository = {
-  getPokemons,
-}
+  getPokedex,
+};

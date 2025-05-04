@@ -1,14 +1,14 @@
 .pokemon_card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
 
-    height: 400px;
-    width: 361px;
-    padding: var(--spacing-xs);
+  height: 400px;
+  width: 361px;
+  padding: var(--spacing-xs);
 
-    border: solid 8px var(--color-brand-0);
-    border-radius: var(--radius-xl);
-    background-color: var(--color-brand-1);
+  border: solid 8px var(--color-brand-0);
+  border-radius: var(--radius-xl);
+  background-color: var(--color-brand-1);
 }

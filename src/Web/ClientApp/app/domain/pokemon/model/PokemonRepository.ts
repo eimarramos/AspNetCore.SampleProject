@@ -1,5 +1,5 @@
-import type { Pokemon } from "./Pokemon"
+import type { Pagination } from "./Pagination";
 
 export type PokemonRepository = {
-  getPokemons: () => Promise<Pokemon[]>
-}
+  getPokedex: (pageNumber: number) => Promise<Pagination>;
+};

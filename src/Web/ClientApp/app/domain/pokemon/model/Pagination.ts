@@ -1,7 +1,7 @@
-import type { PokeApiDTO } from "./PokeApiDTO";
+import type { Pokemon } from "./Pokemon";
 
-export type PaginationResponse = {
-  items: PokeApiDTO[];
+export type Pagination = {
+  items: Pokemon[];
   pageNumber: number;
   totalPages: number;
   totalCount: number;

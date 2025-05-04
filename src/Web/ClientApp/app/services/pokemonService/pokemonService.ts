@@ -1,17 +1,17 @@
-import type { PokemonRepository } from "~/domain/pokemon/model/PokemonRepository"
+import type { PokemonRepository } from "~/domain/pokemon/model/PokemonRepository";
 
-let pokemonRepo: PokemonRepository
+let pokemonRepo: PokemonRepository;
 
 const init = (pokemonRepository: PokemonRepository) => {
-  pokemonRepo = pokemonRepository
-}
+  pokemonRepo = pokemonRepository;
+};
 
-const getPokemons = async () => {
-  const pokemonsDetails = pokemonRepo.getPokemons()
-  return pokemonsDetails
-}
+const getPokedex = async (pageNumber: number) => {
+  const pokemonsDetails = pokemonRepo.getPokedex(pageNumber);
+  return pokemonsDetails;
+};
 
 export const pokemonService = {
   init,
-  getPokemons,
-}
+  getPokedex,
+};

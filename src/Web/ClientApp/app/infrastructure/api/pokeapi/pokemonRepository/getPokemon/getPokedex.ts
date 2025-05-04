@@ -1,9 +1,9 @@
-import { BASE_URL } from '~/config/config'
-import type { PaginationResponse } from '../../types/PaginationResponse'
+import { BASE_URL } from "~/config/config";
+import type { PaginationResponse } from "../../types/PaginationResponse";
 
-export const getPokedex = async () => {
-  const data = await fetch(`${BASE_URL}?PageNumber=1&PageSize=8`)
-  const paginationResponse: PaginationResponse = await data.json()
+export const getPokedexResponse = async (pageNumber: number) => {
+  const data = await fetch(`${BASE_URL}?PageNumber=${pageNumber}&PageSize=3`);
+  const paginationResponse: PaginationResponse = await data.json();
 
-  return paginationResponse
-}
+  return paginationResponse;
+};

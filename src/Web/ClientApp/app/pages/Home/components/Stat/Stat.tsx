@@ -1,10 +1,10 @@
-import { formatNumber } from '~/utils/NumberFormater/NumberFormater'
-import style from './Stat.module.css'
+import { formatNumber } from "~/utils/NumberFormater/NumberFormater";
+import style from "./Stat.module.css";
 
 type StatProps = {
-  name: string
-  value: number
-}
+  name: string;
+  value: number;
+};
 
 export const StatComponent: React.FC<StatProps> = ({ name, value }) => {
   return (
@@ -17,5 +17,5 @@ export const StatComponent: React.FC<StatProps> = ({ name, value }) => {
       </div>
       <progress max="255" value={value} className={style.bar_progress} />
     </div>
-  )
-}
+  );
+};

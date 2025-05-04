@@ -6,7 +6,6 @@ import { Ruler } from '~/assets/svg/Ruler'
 import { getColor } from '~/utils/Colors/ColorsMapper'
 import { TypeComponent } from '../Type/Type'
 import { formatNumber } from '~/utils/NumberFormater/NumberFormater'
-import { FormatString } from '~/utils/StringFormater/StringFormater'
 
 type ListItemProps = {
   pokemon: Pokemon
